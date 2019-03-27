@@ -2,18 +2,26 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import Layout from '../components/layout';
+import { SocialIcon } from 'react-social-icons';
 import SEO from '../components/seo';
 import Header from '../components/Header';
 import ProfilePicture from '../components/ProfilePicture';
 import SimplePanel from '../components/SimplePanel';
+import personalProjects from '../components/personalProjects';
 
 const styles = {
   textCenter: {
     textAlign: 'center',
-    fontSize: '14px',
-
+    fontSize: '16px',
+    fontWeight: '600',
+  },
+  center: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 };
+
 
 const IndexPage = () => (
   <Layout>
@@ -30,12 +38,32 @@ const IndexPage = () => (
       }}
       >
         <ProfilePicture />
-        <div style={styles.textCenter}>Hi! My name is Michael Englo.</div>
+        <div style={styles.textCenter}>Hey! My name is Michael Englo.</div>
         <div style={styles.textCenter}>
-          I am just a normal dude who loves writing software for fun.
+          I am just a normal dude who loves writing software.
           I go to UBC to study computers.
         </div>
+        <br />
+        <div style={styles.textCenter}>
+        I do mostly Web stuff these days. But I have interests in AI, Machine Learning,
+        </div>
+        <div style={styles.textCenter}>
+        NLP, Compilers, or pretty much Computer Science-cy topics, really.
+        </div>
+        <br />
+        <div style={styles.textCenter}>
+        When I am not on my computer, I like to play around with any musical instruments that I can find around me. I also make some Electronic Music as a hobby too! 
+        </div>
+        <br />
         <div style={styles.textCenter}>Come check out my portfolio!</div>
+        <div style={styles.center}>
+          <SocialIcon bgColor="#ffffff00" fgColor="#000000" fontSize={12} network="github" url="https://github.com/michaelenglo" />
+          <SocialIcon bgColor="#ffffff00" fgColor="#000000" fontSize={12} network="facebook" url="https://www.facebook.com/michaelenglo10" />
+          <SocialIcon bgColor="#ffffff00" fgColor="#000000" fontSize={12} network="instagram" url="https://www.instagram.com/michaelenglo10" />
+          <SocialIcon bgColor="#ffffff00" fgColor="#000000" fontSize={12} network="linkedin" url="http://linkedin.com/in/michaelenglo" />
+          <SocialIcon bgColor="#ffffff00" fgColor="#000000" fontSize={12} network="medium" url="https://medium.com/@michaelenglo10" />
+          <SocialIcon bgColor="#ffffff00" fgColor="#000000" fontSize={12} network="soundcloud" url="https://soundcloud.com/myglo" />
+        </div>
       </div>
 
       <div style={{
@@ -58,14 +86,12 @@ Projects
           fontWeight: '300',
         }}
         >
-Here are some amazing project that I have been able to work on
+Here are some amazing projects that I have been able to work on
 
         </h5>
-
-        <SimplePanel date="June 2018" title="Prodapp" description={['Prodapp (stands for “productive app”) is a simple to-do mobile app that allows users to manage and break down a big goal into smaller chunks called subtasks. Each subtask is nested inside a task, and you can make the subtasks as infinitely deep as you want!', 'For this project, I experimented with React Native with Expo SDK. I also use Redux for app state management.']} />
-        <SimplePanel date="June 2018" title="Prodapp" description={['Prodapp (stands for “productive app”) is a simple to-do mobile app that allows users to manage and break down a big goal into smaller chunks called subtasks. Each subtask is nested inside a task, and you can make the subtasks as infinitely deep as you want!', 'For this project, I experimented with React Native with Expo SDK. I also use Redux for app state management.']} />
-
-
+        <React.Fragment>
+          { personalProjects.map(proj => <SimplePanel title={proj.title} date={proj.date} paragraphs={proj.paragraphs} />) }
+        </React.Fragment>
       </div>
     </div>
   </Layout>

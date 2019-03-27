@@ -21,7 +21,7 @@ const styles = {
   },
 };
 
-const SimplePanel = ({ date, title, description }) => (
+const SimplePanel = ({ date, title, paragraphs }) => (
   <div style={styles.container}>
     <div style={styles.date}>
       {date}
@@ -29,14 +29,14 @@ const SimplePanel = ({ date, title, description }) => (
     <h3 style={styles.title}>
       {title}
     </h3>
-    {description.map(par => <p>{par}</p>)}
+    {paragraphs && paragraphs.map(par => <p>{par}</p>)}
   </div>
 );
 
 SimplePanel.propTypes = {
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  paragraphs: PropTypes.string.isRequired,
 };
 
 export default SimplePanel;
