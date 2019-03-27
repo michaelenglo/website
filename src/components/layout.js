@@ -8,10 +8,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
-import windowSize from 'react-window-size';
 
 import './layout.css';
 import SideBar from './SideBar';
+
+
+let windowSize = null;
+
+try {
+  windowSize = require('react-window-size');
+} catch (e) {
+ console.log(e);
+}
 
 const Layout = ({ children, windowWidth }) => (
   <StaticQuery
@@ -56,4 +64,5 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default windowSize(Layout);
+// Workaround for windowSize using window
+export default typeof windowSize === 'function' ? windowSize(Layout) : Layout;

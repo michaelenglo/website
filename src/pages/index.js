@@ -1,8 +1,8 @@
 import React from 'react';
+import { SocialIcon } from 'react-social-icons';
 import { Link } from 'gatsby';
 
 import Layout from '../components/layout';
-import { SocialIcon } from 'react-social-icons';
 import SEO from '../components/seo';
 import Header from '../components/Header';
 import ProfilePicture from '../components/ProfilePicture';
