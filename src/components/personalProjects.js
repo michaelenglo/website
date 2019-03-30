@@ -10,6 +10,11 @@ const personalProjects = [
     paragraphs: ['Prodapp (stands for “productive app”) is a simple to-do mobile app that allows users to manage and break down a big goal into smaller chunks called subtasks. Each subtask is nested inside a task, and you can make the subtasks as infinitely deep as you want!', 'For this project, I experimented with React Native with Expo SDK. I also use Redux for app state management.'],
   },
   {
+    date: 'January 2019',
+    title: 'Magic Mirror (nwHacks 2019)',
+    paragraphs: ['In this project, we are building a replication of snapchat except we added a special feature where users can get feedback on their snaps! We use Microsoft Cognitive Services to analyze reactions of te snap receivers and send out anonymous overall statistics to the reactions received by the snapper.', 'For this project, we use Node.js backend on STDLib (FaaS) and React Native for the mobile client application.'],
+  },
+  {
     date: 'June 2017',
     title: 'AUTO-FOLLEY at GLOBAL AI HACKATHON (1st RUNNER UP)',
     paragraphs: ['Using artificial intelligence (AI), Auto-Foley watch movies by reading the subtitles, finds the funny parts, and add a given sound effect to these funny parts. We implement this AI by using pysrt to parse the subtitles, spaCy to do natural language processing and sentiment analysis, and ffmpeg to add the sound effect to the movie at the right times.', 'I built a subtitle preprocessor to sentiment analyzer that shifts the seconds in the .srt to match with the video.'],

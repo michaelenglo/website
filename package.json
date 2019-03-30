@@ -18,7 +18,8 @@
     "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
     "react-window-size": "^1.2.2",
-    "window-size": "^1.1.1"
+    "window-size": "^1.1.1",
+    "react-social-icons": "^4.1.0"
   },
   "devDependencies": {
     "eslint": "^5.15.2",
@@ -27,8 +28,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
     "gh-pages": "^2.0.1",
-    "prettier": "^1.16.4",
-    "react-social-icons": "^4.1.0"
+    "prettier": "^1.16.4"
   },
   "keywords": [
     "gatsby"

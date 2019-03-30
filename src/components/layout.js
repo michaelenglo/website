@@ -8,12 +8,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
-import windowSize from 'react-window-size';
-
 import './layout.css';
 import SideBar from './SideBar';
 
-const Layout = ({ children, windowWidth }) => (
+const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -24,18 +22,19 @@ const Layout = ({ children, windowWidth }) => (
         }
       }
     `}
-    render={data => (
+    render={() => (
       <>
         <div
           style={{
           }}
         >
-          <div style={{
-            width: '200px',
-            float: 'left',
-            height: '100vh',
-            display: windowWidth > 600 ? 'inherit' : 'none',
-          }}
+          <div
+            style={{
+              width: '200px',
+              float: 'left',
+              height: '100vh',
+            }}
+            id="sidebar"
           >
             <SideBar />
           </div>
@@ -56,4 +55,4 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default windowSize(Layout);
+export default Layout;

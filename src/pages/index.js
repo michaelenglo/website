@@ -1,8 +1,8 @@
 import React from 'react';
+import { SocialIcon } from 'react-social-icons';
 import { Link } from 'gatsby';
 
 import Layout from '../components/layout';
-import { SocialIcon } from 'react-social-icons';
 import SEO from '../components/seo';
 import Header from '../components/Header';
 import ProfilePicture from '../components/ProfilePicture';
@@ -66,7 +66,7 @@ const IndexPage = () => (
         </div>
       </div>
 
-      <div style={{
+      <a name="projects" style={{
         margin: '10px',
         backgroundColor: '#F1F1F1',
         boxShadow: '0px 0px 25px #0000002b',
@@ -92,7 +92,7 @@ Here are some amazing projects that I have been able to work on
         <React.Fragment>
           { personalProjects.map(proj => <SimplePanel title={proj.title} date={proj.date} paragraphs={proj.paragraphs} />) }
         </React.Fragment>
-      </div>
+      </a>
     </div>
   </Layout>
 );
