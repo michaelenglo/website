@@ -45,15 +45,16 @@ const IndexPage = () => (
         </div>
         <br />
         <div style={styles.textCenter}>
-        I do mostly Web stuff these days. But I have interests in AI, Machine Learning,
+        I do mostly Web stuff. But I have interests in AI, Machine Learning,
         </div>
         <div style={styles.textCenter}>
         NLP, Compilers, or pretty much Computer Science-cy topics, really.
         </div>
         <br />
         <div style={styles.textCenter}>
-        When I am not on my computer, I like to play around with any musical instruments that I can find around me. I also make some Electronic Music as a hobby too! 
+        When I am not around my computer, I like to mess around with any musical instruments that I can find. I also enjoy making Electronic Dance Music and Soccer. 
         </div>
+        <br />
         <br />
         <div style={styles.textCenter}>Come check out my portfolio!</div>
         <div style={styles.center}>
